@@ -1,0 +1,16 @@
+Hello! 
+
+Before you jump in with your daks off, you need to install SMARTY on your server. This is a SMARTY site/application! 
+
+Then in the root of your smarty folders (the same folder where you would find /libs/ you need to create: db.quonkay.php
+
+db.quonkay.php should look like the below: 
+
+<?php
+	define('DB_HOST', '');
+	define('DB_USER', '');
+	define('DB_PASSWORD', '');
+	define('DB_DATABASE', '');
+?>
+
+Fill the empty's in with your correct variables!
