@@ -24,8 +24,9 @@ if ($_POST) {
 			$edit = $db->editUser($_GET['id']);
 			$smarty->assign('edit', $edit);
 	/* FRED NOTE: SO, need to create two more pages to work the below functions. One confirm page, which posts a form to the confirmed page, where the delete takes place! */
-			if ($_POST['confirmed'] == "yes") {
-		//		$delete = $db->deleteUser($_POST['id']);
+			if ($_POST['confirm-delete']=="Confirm") {
+				$delete = $db->deleteUser($_POST['id']);
+				echo "I am being deleted!";
 				$smarty->assign('dbresult', $delete);
 			} else {
 			//	$delete = $db->deleteUserConfirm($_GET['id']);

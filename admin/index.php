@@ -19,6 +19,7 @@
 		$site = $db->getSiteConfig($_SERVER['SERVER_NAME']);
 		$user = $_SESSION['user'];
 		$page = $_GET['page'];
+		$systemMsg = "I still have to code this bit! Was going to be a databse of messages key'd on a single word, then a function to pick each message out based on keyword";
 
 	/* LOAD FUNCTIONS */
 		require_once($SITE_PATH."inc/functions/common.php");
@@ -28,6 +29,8 @@
 		$smarty->assign('user', $user);
 		$smarty->assign('page', $page);
 		$smarty->assign('action', $_GET['action']);
+	if ($_GET['message'])
+		$smarty->assign('message', $systemMsg);
 
         /* DISPLAY PAGE */
                 if (isset($_SESSION['user']['username'])) {
