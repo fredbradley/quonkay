@@ -16,6 +16,16 @@ if ($_POST) {
 			$smarty->assign('dbresult', $success);
 		}
 	}
+	if (isset($_GET['id']) && $_GET['action']=="edit") {
+		$update = $db->updateUser($_GET['id']);
+		if ($update !=1) {
+			$error = $db->error("Couldn't Update!");
+			$smarty->assign('dbresult', $error);
+		} else {
+			$success = successMsg("Now, I've moved some things around and that's all good!");
+			$smarty->assign('dbresult', $success);
+		}
+	}
 }
 	if ($_GET['action']=="delete") {
 		if ($_GET['id']=="") {
