@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-12 21:23:25
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-13 13:25:44
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users_form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7641886104f86f3379cb193-33660388%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '80fa56c100aa0388c688395716758577dec419be' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users_form.tpl',
-      1 => 1334262204,
+      1 => 1334319917,
       2 => 'file',
     ),
   ),
@@ -52,8 +52,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <p>If you do change your mind, later on, you can always add a user like normal!</p>
 </fieldset>
 <fieldset class="column-right">
-<fieldset class="column-left"><button class="button-cancel">Cancel</button>
-</fieldset><fieldset class="column-right"><input type="submit" class="button-confirm" value="Confirm" />
+<fieldset class="column-left"><a href="index.php?message=Cancelled"><button class="button-cancel">Cancel</button></a>
+<input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['id'];?>
+" />
+</fieldset><fieldset class="column-right"><input type="submit" class="button-confirm" name="confirm-delete" value="Confirm" />
 </fieldset></fieldset>
 <div style="clear:both;"></div></form>
 <?php }else{ ?>

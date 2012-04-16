@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-12 15:26:08
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 14:48:31
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sites.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6326994514f86e1c33e0479-03014778%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'af4d36aedd3a659072d2a7f8a9b7c5cbcc16bb4c' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sites.tpl',
-      1 => 1334240746,
+      1 => 1334584042,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 	<body><div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
 <?php echo $_smarty_tpl->getSubTemplate ("admin_sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
 		
 		<div id="main-content"> <!-- Main Content Section with everything -->
 			
@@ -39,6 +38,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				</div>
 			</noscript>
+<?php echo $_smarty_tpl->getSubTemplate ("admin_notification.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 
 			<h2 id="page-intro">Sites Manager</h2>
 			
@@ -51,10 +52,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php $_tmp2=ob_get_clean();?><?php if ($_tmp2=="edit"){?>
 					<?php echo $_smarty_tpl->getSubTemplate ("admin_sites_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
+				<?php }else{?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['action']->value;?>
+<?php $_tmp3=ob_get_clean();?><?php if ($_tmp3=="delete"){?>
+                                        <?php echo $_smarty_tpl->getSubTemplate ("admin_sites_form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 				<?php }else{ ?>
 					<?php echo $_smarty_tpl->getSubTemplate ("admin_sites_list.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-				<?php }}?>
+				<?php }}}?>
 				
 			</div> <!-- End .content-box -->	
 <?php echo $_smarty_tpl->getSubTemplate ("admin_bottom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

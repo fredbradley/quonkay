@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-12 20:55:01
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-13 13:48:02
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19315331354f6f49a6a64bf3-93529153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ccff5180a345803d72029dcc1b23abd6c642bc01' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users.tpl',
-      1 => 1334260498,
+      1 => 1334321273,
       2 => 'file',
     ),
   ),
@@ -39,6 +39,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				</div>
 			</noscript>
+<?php echo $_smarty_tpl->getSubTemplate ("admin_notification.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+
 
 			<h2 id="page-intro">User Management</h2>
 			<div class="content-box"><!-- Start Content Box -->

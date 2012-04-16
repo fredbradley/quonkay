@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-12 15:26:08
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 16:33:43
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sites_form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4220078184f86e600ca6ad3-39795615%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '744f9e0846b1aaadb40734b947b2a0cd6e39a116' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sites_form.tpl',
-      1 => 1334239557,
+      1 => 1334590421,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_4f86e600caa387_10122732',
+  'variables' => 
+  array (
+    'action' => 0,
+    'edit' => 0,
+    'user' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_4f86e600caa387_10122732')) {function content_4f86e600caa387_10122732($_smarty_tpl) {?> <div class="content-box-header">
 
-                                        <h3>Add User</h3>
+                                        <h3>Add Site</h3>
 
 
                                         <div class="clear"></div>
@@ -30,51 +36,114 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                                 <div class="content-box-content">
 
-   <form action="" method="post">
+<?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['action']->value;?>
+<?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=='delete'){?>
+<form action="index.php?<?php echo $_SERVER['QUERY_STRING'];?>
+" method="post">
+<fieldset class="column-left">
+<p>Are you 100% sure you want to delete <span class="highlight"><?php echo $_smarty_tpl->tpl_vars['edit']->value['server_name'];?>
+</span> from the database?</p>
+<p>There is no recovering this method, apart from adding the entire content of the site again!</p>
+</fieldset>
+<fieldset class="column-right">
+<fieldset class="column-left"><a href="index.php?message=Cancelled"><button class="button-cancel">Cancel</button></a>
+<input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['id'];?>
+" />
+</fieldset><fieldset class="column-right"><input type="submit" class="button-confirm" name="confirm-delete" value="Confirm" />
+</fieldset></fieldset>
+<div style="clear:both;"></div></form>
+<?php }else{ ?>
 
-                                                        <fieldset> <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+   <form action="index.php?<?php echo $_SERVER['QUERY_STRING'];?>
+" method="post">
 
-                                                                <p>
-                                                                        <label>Small form input</label>
-                                                                                <input class="text-input small-input" type="text" id="small-input" name="small-input" /> <span class="input-notification success png_bg">Successful message</span> <!-- Classes for input-notification: success, error, information, attention -->
-                                                                                <br /><small>A small description of the field</small>
-                                                                </p>
-
-                                                                <p>
-                                                                        <label>Medium form input</label>
-                                                                        <input class="text-input medium-input" type="text" id="medium-input" name="medium-input" /> <span class="input-notification error png_bg">Error message</span>
-                                                                </p>
-
-                                                                <p>
-                                                                        <label>Large form input</label>
-                                                                        <input class="text-input large-input" type="text" id="large-input" name="large-input" />
-                                                                </p>
-
-                                                                <p>
-                                                                        <label>Checkboxes</label>
-                                                                        <input type="checkbox" name="checkbox1" /> This is a checkbox <input type="checkbox" name="checkbox2" /> And this is another checkbox
-                                                                </p>
-
-                                                                <p>
-                                                                        <label>Radio buttons</label>
-                                                                        <input type="radio" name="radio1" /> This is a radio button<br />
-                                                                        <input type="radio" name="radio2" /> This is another radio button
-                                                                </p>
+                                                        <fieldset class="column-left"> <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+<input type="hidden" name="id" id="id" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['id'];?>
+" />
 
                                                                 <p>
-                                                                        <label>This is a drop down list</label>
-                                                                        <select name="dropdown" class="small-input">
-                                                                                <option value="option1">Option 1</option>
-                                                                                <option value="option2">Option 2</option>
-                                                                                <option value="option3">Option 3</option>
-                                                                                <option value="option4">Option 4</option>
-                                                                        </select>
+                                                                        <label>Server Host</label>
+                                                                                <input class="text-input medium-input" type="text" id="server_name" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['server_name'];?>
+" name="server_name" />
+                                                                </p>
+<input type="hidden" name="template" id="template" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['template'];?>
+" />
+                                                                <p>
+                                                                        <label>Site Name</label>
+                                                                        <input
+										class="text-input medium-input" 
+										type="text" 
+										id="name" 
+										name="name" 
+										value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['name'];?>
+" 
+									/> 
                                                                 </p>
 
+								<p>
+									<label>Meta Keywords</label>
+									<input class="text-input medium-input" type="text" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['keywords'];?>
+" id="keywords" name="keywords" />
+							</p>
                                                                 <p>
-                                                                        <label>Textarea with WYSIWYG</label>
-                                                                        <textarea class="text-input textarea wysiwyg" id="textarea" name="textfield" cols="79" rows="15"></textarea>
+                                                                        <label>Meta Description</label>
+									<textarea class="text-input textarea" id="description" name="description" cols="30" rows="5"><?php echo $_smarty_tpl->tpl_vars['edit']->value['description'];?>
+</textarea>
                                                                 </p>
+								</fieldset><fieldset class="column-right">
+ <p>
+                                                                        <label>Title</label>
+                                                                        <input class="text-input medium-input" type="text"
+                                                                                id="title" name="title" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['title'];?>
+" />
+                                                                </p>
+								<p><label>Offer Subhead</label>
+								<input class="text-input medium-input" id="offer_subhead" name="offer_subhead" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['offer_subhead'];?>
+" />
+								</p>
+								 <p>
+                                                                        <label>Offer Description</label>
+                                                                        <textarea class="text-input textarea wysiwyg" id="offer_description" name="offer_description" cols="70" rows="15"><?php echo $_smarty_tpl->tpl_vars['edit']->value['offer_description'];?>
+</textarea>
+                                                                </p>
+</fieldset>
+<div class="clearfix clear"></div>
+<fieldset>
+ <p>
+                                                                        <label>Video Embed Code</label>
+                                                                        <textarea class="text-input medium-input textarea" id="video" name="video" cols="10" rows="10"><?php echo $_smarty_tpl->tpl_vars['edit']->value['video'];?>
+</textarea>
+                                                                </p>                                                               
+	<p><label>Content Heading</label>
+	<input class="text-input medium-input" id="content_heading" name="content_heading" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['content_heading'];?>
+" />
+	</p>
+ <p>
+                                                                        <label>Content HTML</label>
+                                                                        <textarea class="text-input wysiwyg textarea" id="content_html" name="content_html" cols="70" rows="15"><?php echo $_smarty_tpl->tpl_vars['edit']->value['content_html'];?>
+</textarea>
+                                                                </p>
+</fieldset><fieldset class="column-left">
+<p><label>Box One Headline</label><input class="text-input medium-input" id="box_one_headline" name="box_one_headline" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['box_one_headline'];?>
+" /></p>
+<p><label>Box One Content</label><textarea class="text-input medium-input textarea" id="box_one" name="box_one" cols="10" rows="5"><?php echo $_smarty_tpl->tpl_vars['edit']->value['box_one'];?>
+</textarea></p>
+<p><label>Box Two Headline</label><input class="text-input medium-input" id="box_two_headline" name="box_two_headline" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['box_two_headline'];?>
+" /></p>
+<p><label>Box Two Content</label><textarea class="text-input medium-input textarea" id="box_two" name="box_two" cols="10" rows="5"><?php echo $_smarty_tpl->tpl_vars['edit']->value['box_two'];?>
+</textarea></p>
+<p><label>Box Three Headline</label><input class="text-input medium-input" id="box_three_headline" name="box_three_headline" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['box_three_headline'];?>
+" /></p>
+<p><label>Box Three Content</label><textarea class="text-input medium-input textarea" id="box_three" name="box_three" cols="10" rows="5"><?php echo $_smarty_tpl->tpl_vars['edit']->value['box_three'];?>
+</textarea></p>
+</fieldset><fieldset class="column-right">
+<p><label>Google Analytics Code</label><input class="text-input medium-input" id="analytics" name="analytics" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['analytics'];?>
+" /></p>
+<p><label>Time Stamp</label><input class="text-input medium-input" id="updated" name="updated" value="<?php echo time();?>
+" readonly />
+<p><label>Last Updated By</label><input class="text-input medium-input" id="updatedby" name="updatedby" value="<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+" readonly /><br /><small>That's <i><?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+</i> to you and I!</small> 
 
                                                                 <p>
                                                                         <input class="button" type="submit" value="Submit" />
@@ -84,6 +153,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                                                         <div class="clear"></div><!-- End .clear -->
 
-                                                </form>
+                                                </form> <?php }?>
                                         </div> <!-- End Content Box Content -->
 <?php }} ?>

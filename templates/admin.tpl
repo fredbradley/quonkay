@@ -12,6 +12,7 @@
 					</div>
 				</div>
 			</noscript>
+{include file="admin_notification.tpl"}
 			
 			<!-- Page Head -->
 			<h2>Welcome {$user.first_name}</h2>

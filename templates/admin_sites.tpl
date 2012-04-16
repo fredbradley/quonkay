@@ -1,8 +1,7 @@
 {include file="admin_head.tpl"}  
 
 	<body><div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
-{include file="admin_sidebar.tpl"}
-		
+{include file="admin_sidebar.tpl"}		
 		<div id="main-content"> <!-- Main Content Section with everything -->
 			
 			<noscript> <!-- Show a notification if the user has disabled javascript -->
@@ -12,6 +11,7 @@
 					</div>
 				</div>
 			</noscript>
+{include file="admin_notification.tpl"}
 
 			<h2 id="page-intro">Sites Manager</h2>
 			
@@ -20,6 +20,8 @@
 					{include file="admin_sites_form.tpl"}
 				{elseif {$action}=="edit"}
 					{include file="admin_sites_form.tpl"}
+				{elseif {$action}=="delete"}
+                                        {include file="admin_sites_form.tpl"}
 				{else}
 					{include file="admin_sites_list.tpl"}
 				{/if}

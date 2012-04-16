@@ -16,8 +16,9 @@
 <p>If you do change your mind, later on, you can always add a user like normal!</p>
 </fieldset>
 <fieldset class="column-right">
-<fieldset class="column-left"><button class="button-cancel">Cancel</button>
-</fieldset><fieldset class="column-right"><input type="submit" class="button-confirm" value="Confirm" />
+<fieldset class="column-left"><a href="index.php?message=Cancelled"><button class="button-cancel">Cancel</button></a>
+<input type="hidden" name="id" value="{$edit.id}" />
+</fieldset><fieldset class="column-right"><input type="submit" class="button-confirm" name="confirm-delete" value="Confirm" />
 </fieldset></fieldset>
 <div style="clear:both;"></div></form>
 {else}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-03-25 17:18:34
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-13 13:30:36
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:992865934f6b4c617fe640-03415112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ed74317be5ed2316c7f6815da8ac42a870a4fdc3' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin.tpl',
-      1 => 1332692311,
+      1 => 1334320121,
       2 => 'file',
     ),
   ),
@@ -39,6 +39,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				</div>
 			</noscript>
+<?php echo $_smarty_tpl->getSubTemplate ("admin_notification.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 			
 			<!-- Page Head -->
 			<h2>Welcome <?php echo $_smarty_tpl->tpl_vars['user']->value['first_name'];?>

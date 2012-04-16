@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-03-23 16:36:04
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 15:47:18
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/site_index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5085096084f6c9d0de84651-25461843%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6ef9f2688e48e2779563fa879a8912dd778de3a8' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/site_index.tpl',
-      1 => 1332520561,
+      1 => 1334587637,
       2 => 'file',
     ),
   ),

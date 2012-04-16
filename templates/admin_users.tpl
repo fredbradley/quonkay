@@ -12,6 +12,8 @@
 					</div>
 				</div>
 			</noscript>
+{include file="admin_notification.tpl"}
+
 
 			<h2 id="page-intro">User Management</h2>
 			<div class="content-box"><!-- Start Content Box -->

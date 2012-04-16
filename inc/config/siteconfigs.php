@@ -48,8 +48,8 @@ define('TWO_SITES_SAME_NAME', 'Two of ya sites have the same host');
 		$smarty->setConfigDir($SITE_PATH.'configs');
 	
 	/* FACEBOOK FAN PAGE */
-		$json_string = 'https://graph.facebook.com/'.$fanpage;
-		$jsondata = file_get_contents($json_string);
-		$fanpage = json_decode($jsondata, true);
+	//	$json_string = 'https://graph.facebook.com/'.$fanpage;
+	//	$jsondata = file_get_contents($json_string);
+	//	$fanpage = json_decode($jsondata, true);
 
 ?>
