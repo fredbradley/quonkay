@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-12 16:04:55
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 18:46:45
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5968958624f6b4f5ee42bb3-23068022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5dccfedfdda4fe0395f3496cf70015bae436b40e' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sidebar.tpl',
-      1 => 1334243090,
+      1 => 1334598403,
       2 => 'file',
     ),
   ),
@@ -72,7 +72,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</li>      
 				
 			</ul> <!-- End #main-nav -->
-			
+			<div id="info" style="display:none">
+			<h3>Project Info</h3>
+			</div>
 			<div id="messages" style="display: none"> <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
 				
 				<h3>3 Messages</h3>
