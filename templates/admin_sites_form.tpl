@@ -56,21 +56,22 @@
  <p>
                                                                         <label>Title</label>
                                                                         <input class="text-input medium-input" type="text"
-                                                                                id="title" name="title" value="{$edit.title}" />
+                                                                                id="title" name="title" value="{$edit.title}" /><br /><small>Maximum 36 Characters</small>
                                                                 </p>
 								<p><label>Offer Subhead</label>
 								<input class="text-input medium-input" id="offer_subhead" name="offer_subhead" value="{$edit.offer_subhead}" />
-								</p>
+								<br /><small>Maximum 27 Characters</small></p>
 								 <p>
                                                                         <label>Offer Description</label>
                                                                         <textarea class="text-input textarea wysiwyg" id="offer_description" name="offer_description" cols="70" rows="15">{$edit.offer_description}</textarea>
-                                                                </p>
+                                                               <br /><small>Maximum 550 Characters</small> </p>
 </fieldset>
 <div class="clearfix clear"></div>
 <fieldset>
  <p>
                                                                         <label>Video Embed Code</label>
                                                                         <textarea class="text-input medium-input textarea" id="video" name="video" cols="10" rows="10">{$edit.video}</textarea>
+								<br /><small>Full Embed Code. Width: 598px. Recommended Height: 335px.</small>
                                                                 </p>                                                               
 	<p><label>Content Heading</label>
 	<input class="text-input medium-input" id="content_heading" name="content_heading" value="{$edit.content_heading}" />
@@ -88,7 +89,7 @@
 <p><label>Box Three Content</label><textarea class="text-input medium-input textarea" id="box_three" name="box_three" cols="10" rows="5">{$edit.box_three}</textarea></p>
 </fieldset><fieldset class="column-right">
 <p><label>Google Analytics Code</label><input class="text-input medium-input" id="analytics" name="analytics" value="{$edit.analytics}" /></p>
-<p><label>Time Stamp</label><input class="text-input medium-input" id="updated" name="updated" value="{$smarty.now}" readonly />
+<p><label>Time Stamp</label><input class="text-input medium-input" id="updated" name="updated" value="{$smarty.now}" readonly /><br /><small>{$smarty.now|date_format}</small></p>
 <p><label>Last Updated By</label><input class="text-input medium-input" id="updatedby" name="updatedby" value="{$user.id}" readonly /><br /><small>That's <i>{$user.username}</i> to you and I!</small> 
 
                                                                 <p>

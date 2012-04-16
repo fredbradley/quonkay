@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 16:33:43
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 17:59:12
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sites_form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4220078184f86e600ca6ad3-39795615%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '744f9e0846b1aaadb40734b947b2a0cd6e39a116' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sites_form.tpl',
-      1 => 1334590421,
+      1 => 1334595550,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4f86e600caa387_10122732')) {function content_4f86e600caa387_10122732($_smarty_tpl) {?> <div class="content-box-header">
+<?php if ($_valid && !is_callable('content_4f86e600caa387_10122732')) {function content_4f86e600caa387_10122732($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Users/fredbradley/Sites/smarty_site/libs/plugins/modifier.date_format.php';
+?> <div class="content-box-header">
 
                                         <h3>Add Site</h3>
 
@@ -95,17 +96,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                                                         <label>Title</label>
                                                                         <input class="text-input medium-input" type="text"
                                                                                 id="title" name="title" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['title'];?>
-" />
+" /><br /><small>Maximum 36 Characters</small>
                                                                 </p>
 								<p><label>Offer Subhead</label>
 								<input class="text-input medium-input" id="offer_subhead" name="offer_subhead" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['offer_subhead'];?>
 " />
-								</p>
+								<br /><small>Maximum 27 Characters</small></p>
 								 <p>
                                                                         <label>Offer Description</label>
                                                                         <textarea class="text-input textarea wysiwyg" id="offer_description" name="offer_description" cols="70" rows="15"><?php echo $_smarty_tpl->tpl_vars['edit']->value['offer_description'];?>
 </textarea>
-                                                                </p>
+                                                               <br /><small>Maximum 550 Characters</small> </p>
 </fieldset>
 <div class="clearfix clear"></div>
 <fieldset>
@@ -113,6 +114,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                                                         <label>Video Embed Code</label>
                                                                         <textarea class="text-input medium-input textarea" id="video" name="video" cols="10" rows="10"><?php echo $_smarty_tpl->tpl_vars['edit']->value['video'];?>
 </textarea>
+								<br /><small>Full Embed Code. Width: 598px. Recommended Height: 335px.</small>
                                                                 </p>                                                               
 	<p><label>Content Heading</label>
 	<input class="text-input medium-input" id="content_heading" name="content_heading" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['content_heading'];?>
@@ -140,7 +142,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <p><label>Google Analytics Code</label><input class="text-input medium-input" id="analytics" name="analytics" value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['analytics'];?>
 " /></p>
 <p><label>Time Stamp</label><input class="text-input medium-input" id="updated" name="updated" value="<?php echo time();?>
-" readonly />
+" readonly /><br /><small><?php echo smarty_modifier_date_format(time());?>
+</small></p>
 <p><label>Last Updated By</label><input class="text-input medium-input" id="updatedby" name="updatedby" value="<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 " readonly /><br /><small>That's <i><?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
 </i> to you and I!</small> 

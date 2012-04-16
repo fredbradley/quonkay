@@ -124,7 +124,7 @@ function addSite() {
 	$postvals = implode("', '", $rearray);
 	
 	$echo = "INSERT INTO ".DB_PREFIX."sites (".implode(", ", $fields).") VALUES ('".$postvals."')";
-	echo $echo;
+//	echo $echo;
 	$query = $echo;
 	$result = mysql_query($query);
 	return $result;
@@ -135,11 +135,12 @@ $select = "SELECT * FROM ".DB_PREFIX."sites";
 $res = mysql_query($select);
 $num = mysql_num_fields($res);
 for ($i=0; $i < $num; $i++) {
-	$update .= mysql_field_name($res, $i)."='".$_POST[mysql_field_name($res, $i)]."', ";
+	$post = htmlentities($_POST[mysql_field_name($res, $i)], ENT_QUOTES);
+	$update .= mysql_field_name($res, $i)."='".$post."', ";
 	}
 	$update = substr($update, 0, -2);
 $echo = "UPDATE ".DB_PREFIX."sites SET ".$update." WHERE id=".$id;
-echo $echo;
+//echo $echo;
 	$query = $echo;
 	$result = mysql_query($query);
 	return $result;

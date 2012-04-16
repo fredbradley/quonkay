@@ -85,8 +85,9 @@
                     
                     <ul id="offerslider-items">
                     
-                    <li><iframe src="http://player.vimeo.com/video/{$SITE.video}?title=0&amp;byline=0&amp;portrait=0" width="598" height="335" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
-                    </ul>
+                    <li>{$SITE.video}</li>
+			<!-- <iframe src="http://player.vimeo.com/video/{$SITE.video}?title=0&amp;byline=0&amp;portrait=0" width="598" height="335" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                  -->  </ul>
 
                 
                 </div>
