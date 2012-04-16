@@ -11,6 +11,7 @@
 	/* DEFINES PATHS */
 		$ROOT_PATH = "/Users/fredbradley/Sites/smarty_site/";
 		$SITE_PATH = $ROOT_PATH."simplysofas/";
+		
 
 	/* INCLUDE SMARTY THINGS */
 		require_once($ROOT_PATH.'libs/Smarty.class.php'); // THE SCRIPT THAT RUNS SMARTY
@@ -18,7 +19,7 @@
 		$smarty = new Smarty;
 define('TWO_SITES_SAME_NAME', 'Two of ya sites have the same host');
 	/* INCLUDE DATABASE THINGS */
-		require_once($ROOT_PATH.'db.simplysofas.php'); 		// Include DB SETTINGS
+		require_once($ROOT_PATH.'db.quonkay.php'); 		// Include DB SETTINGS
 		define('DB_PREFIX', 'ss_');				// PREFIX (IF USED) FOR THE DATABASE
 		define('USERS_TABLE', DB_PREFIX.'users'); 		// (NAME OF USERS TABLE)
 		define('CONFIG_TABLE', DB_PREFIX.'config'); 		// (NAME OF CONFIG TABLE)
