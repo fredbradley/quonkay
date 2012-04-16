@@ -32,8 +32,13 @@ define('TWO_SITES_SAME_NAME', 'Two of ya sites have the same host');
 
 	/* LOG OUT */
 		if (isset($_GET['logout'])) {
-			session_destroy();
-			header('location: index.php?message=loggedout');
+			if ($_SESSION['user']['acl']==0) {
+				session_destroy();
+				header("Location: index.php?message=loggedout&locked&user=".$_SESSION['user']['first_name']);
+			} else {
+				session_destroy();
+				header('location: index.php?message=loggedout');
+			}
 		}
 	/* EASY VARIABLES */
 		$user = $_SESSION['user'];

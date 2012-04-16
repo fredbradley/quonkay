@@ -61,11 +61,11 @@
                                                                 <p>
                                                                         <label>Access Control</label>
                                                                         <select name="acl" class="small-input" id="acl">
-										<option value="0">--- SELECT ---</option>
+										<option value="{$edit.acl}">--- SELECT ---</option>
                                                                                 <option value="0">Locked Out</option>
-                                                                                <option value="1">Edit Sites Only</option>
-                                                                                <option value="2">Add/Edit Sites</option>
-                                                                                <option value="3">Full Admin</option>
+                                                                                <option value="1">Edit & Delete Sites Only</option>
+                                                                                <option value="2">Full Sites Management</option>
+                                                                                <option value="3">Full Admin (Users & Site)</option>
                                                                         </select>
                                                                 </p>
 

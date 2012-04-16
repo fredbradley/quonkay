@@ -22,11 +22,13 @@
 						Sites Manager
 					</a>
 					<ul>
+				{if {$user.acl} gt 1}
 						<li><a href="index.php?page=sites&action=add">Add Site</a></li>
+				{/if}
 						<li><a href="index.php?page=sites&action=list">List Sites</a></li>
 					</ul>
 				</li>
-				
+				{if {$user.acl} gt 2}
 				<li>
 					<a href="#" class="nav-top-item {if {$page}=="users"}current{/if}">
 						User Manager
@@ -36,7 +38,7 @@
 						<li><a href="index.php?page=users&action=list">List Users</a></li>
 					</ul>
 				</li>      
-				
+				{/if}
 			</ul> <!-- End #main-nav -->
 			<div id="info" style="display:none">
 			<h3>Project Info</h3>

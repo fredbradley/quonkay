@@ -20,6 +20,9 @@
 				//	$_SESSION['user']['ip'] = $user['last_ip'];
 				//	$_SESSION['begin'] = $user['last_login'];
 					$_SESSION['user'] = $user;						
+		if ($_SESSION['user']['acl']==0) {
+			header("Location:index.php?logout&locked");
+		}
 				
 				} else {
 				// Invalid username/password
@@ -30,6 +33,10 @@
 
 	/* DO THE LOG OUT STUFF */
 		if ($_GET['message'] == 'loggedout') {
-			$smarty->assign('msg', getMsg("attention", "You have been logged out"));
+			if (isset($_GET['locked'])) {
+				$smarty->assign('msg', getMsg("attention", "Erm, ".$_GET['user'].", there's no easy way of telling you this! Your account has been locked. Please contact an administrator"));
+			} else {
+				$smarty->assign('msg', getMsg("attention", "You have been logged out"));
+			}
 		}
 ?>

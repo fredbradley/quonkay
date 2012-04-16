@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-13 13:25:44
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 19:54:50
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users_form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7641886104f86f3379cb193-33660388%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '80fa56c100aa0388c688395716758577dec419be' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users_form.tpl',
-      1 => 1334319917,
+      1 => 1334602488,
       2 => 'file',
     ),
   ),
@@ -104,11 +104,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                                                 <p>
                                                                         <label>Access Control</label>
                                                                         <select name="acl" class="small-input" id="acl">
-										<option value="0">--- SELECT ---</option>
+										<option value="<?php echo $_smarty_tpl->tpl_vars['edit']->value['acl'];?>
+">--- SELECT ---</option>
                                                                                 <option value="0">Locked Out</option>
-                                                                                <option value="1">Edit Sites Only</option>
-                                                                                <option value="2">Add/Edit Sites</option>
-                                                                                <option value="3">Full Admin</option>
+                                                                                <option value="1">Edit & Delete Sites Only</option>
+                                                                                <option value="2">Full Sites Management</option>
+                                                                                <option value="3">Full Admin (Users & Site)</option>
                                                                         </select>
                                                                 </p>
 

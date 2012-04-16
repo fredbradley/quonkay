@@ -7,7 +7,7 @@
 ** Fred Bradley +44 (0) 7867 953 849  **
 ** fred@fredbradley.co.uk             **
 ***************************************/
-//echo phpinfo();
+
 	/* Page Setup */
 		session_start();
 
@@ -20,7 +20,6 @@
 		$user = $_SESSION['user'];
 		$page = $_GET['page'];
 		$systemMsg = "I still have to code this bit! Was going to be a databse of messages key'd on a single word, then a function to pick each message out based on keyword";
-
 	/* LOAD FUNCTIONS */
 		require_once($SITE_PATH."inc/functions/common.php");
 
@@ -49,12 +48,6 @@
 					$smarty->display('admin.tpl');
 					break;
 			}
-/*
-			if ($page == 'users') {
-				$smarty->display('admin_users.tpl');
-			} else {
-                        	$smarty->display('admin.tpl');
-			} */
                 } else {
                         if ($_POST) {
                                 $smarty->assign('error', "Looks like we had a problem logging you in! Give it another go...");

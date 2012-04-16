@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 18:46:45
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-16 19:54:50
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5968958624f6b4f5ee42bb3-23068022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5dccfedfdda4fe0395f3496cf70015bae436b40e' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_sidebar.tpl',
-      1 => 1334598403,
+      1 => 1334602368,
       2 => 'file',
     ),
   ),
@@ -55,14 +55,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						Sites Manager
 					</a>
 					<ul>
+				<?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['acl'];?>
+<?php $_tmp3=ob_get_clean();?><?php if ($_tmp3>1){?>
 						<li><a href="index.php?page=sites&action=add">Add Site</a></li>
+				<?php }?>
 						<li><a href="index.php?page=sites&action=list">List Sites</a></li>
 					</ul>
 				</li>
-				
+				<?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['acl'];?>
+<?php $_tmp4=ob_get_clean();?><?php if ($_tmp4>2){?>
 				<li>
 					<a href="#" class="nav-top-item <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-<?php $_tmp3=ob_get_clean();?><?php if ($_tmp3=="users"){?>current<?php }?>">
+<?php $_tmp5=ob_get_clean();?><?php if ($_tmp5=="users"){?>current<?php }?>">
 						User Manager
 					</a>
 					<ul>
@@ -70,7 +74,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<li><a href="index.php?page=users&action=list">List Users</a></li>
 					</ul>
 				</li>      
-				
+				<?php }?>
 			</ul> <!-- End #main-nav -->
 			<div id="info" style="display:none">
 			<h3>Project Info</h3>
