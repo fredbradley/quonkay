@@ -1,5 +1,4 @@
 <?php
-//require_once($SITE_ROOT.'config.php');
 
 function getMsg($type, $content) {
 	$output = "<div class=\"notification ".$type." png_bg\">";
@@ -7,7 +6,4 @@ function getMsg($type, $content) {
 	$output .= "</div>";
 	return $output;
 }
-
-
 	?>
-
