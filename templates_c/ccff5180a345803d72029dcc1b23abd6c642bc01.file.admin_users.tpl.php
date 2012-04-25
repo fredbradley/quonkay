@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-04-13 13:48:02
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-25 22:58:04
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19315331354f6f49a6a64bf3-93529153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2266231554f98736c4185b1-21864456%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ccff5180a345803d72029dcc1b23abd6c642bc01' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_users.tpl',
-      1 => 1334321273,
+      1 => 1334604120,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19315331354f6f49a6a64bf3-93529153',
+  'nocache_hash' => '2266231554f98736c4185b1-21864456',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4f6f49a6a9e222_80915233',
   'variables' => 
   array (
     'action' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4f98736c46ac56_62076060',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4f6f49a6a9e222_80915233')) {function content_4f6f49a6a9e222_80915233($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("admin_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_4f98736c46ac56_62076060')) {function content_4f98736c46ac56_62076060($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("admin_head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
   
 
 	<body><div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->

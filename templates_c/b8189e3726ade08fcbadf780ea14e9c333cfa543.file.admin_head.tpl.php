@@ -1,30 +1,25 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-03-22 21:42:52
+<?php /* Smarty version Smarty-3.1.8, created on 2012-04-25 22:57:48
          compiled from "/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_head.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13989681054f6b4e41b749d1-55875074%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16347222444f98735ce3f067-12803790%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b8189e3726ade08fcbadf780ea14e9c333cfa543' => 
     array (
       0 => '/Users/fredbradley/Sites/smarty_site/simplysofas/templates/admin_head.tpl',
-      1 => 1332452570,
+      1 => 1335389352,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13989681054f6b4e41b749d1-55875074',
+  'nocache_hash' => '16347222444f98735ce3f067-12803790',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4f6b4e41b790f3_50354309',
-  'variables' => 
-  array (
-    'SITE' => 0,
-    'ADMIN' => 0,
-  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_4f98735ce41155_61766720',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4f6b4e41b790f3_50354309')) {function content_4f6b4e41b790f3_50354309($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<?php if ($_valid && !is_callable('content_4f98735ce41155_61766720')) {function content_4f98735ce41155_61766720($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -33,9 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		
-		<title><?php echo $_smarty_tpl->tpl_vars['SITE']->value['name'];?>
- | <?php echo $_smarty_tpl->tpl_vars['ADMIN']->value['page_name'];?>
-</title>
+		<title>webvid.co.uk multi website manager | &copy 2012</title>
 		
 		<!--                       CSS                       -->
 	  
@@ -86,6 +79,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				DD_belatedPNG.fix('.png_bg, img, li');
 			</script>
 		<![endif]-->
-		
+<!-- Image Resizer -->
+
+		<script type="text/javascript" src="resources/scripts/jquery.imgareaselect-0.3.min.js"></script>		
 	</head>
 <?php }} ?>

@@ -4,7 +4,7 @@
 			<div id="login-top">
 				<h1>{$SITE.name}</h1>
 				<!-- Logo (221px width) -->
-				<img id="logo" src="../assets/images/sofa_logo.png" alt="{$SITE.name} logo" />
+				<a href="http://www.webvid.co.uk"><img id="logo" src="../assets/images/seologo.png" alt="{$SITE.name} logo" /></a>
 			</div> <!-- End #logn-top -->
 			<div id="login-content">
 				<form action="index.php" method="POST">
@@ -38,9 +38,14 @@
 						<input class="button" type="submit" value="Sign In" />
 					</p>
 				</form>
+				
+				<div class="clear"></div>
+				<p>developed by <a href="http://webvid.co.uk">webvid.co.uk</a> | e: <a href="mailto:hello@webvid.co.uk?subject=Support Query">hello@webvid.co.uk</a></p>
+				<p>t: <strong>020 81331728</strong> &copy luckythirteen ltd 2012</p>
+
 			</div> <!-- End #login-content -->
-			
 		</div> <!-- End #login-wrapper -->	
+		
   </body>  
 </html>
 

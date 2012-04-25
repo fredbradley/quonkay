@@ -7,7 +7,7 @@
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		
-		<title>{$SITE.name} | {$ADMIN.page_name}</title>
+		<title>webvid.co.uk multi website manager | &copy 2012</title>
 		
 		<!--                       CSS                       -->
 	  
@@ -58,5 +58,7 @@
 				DD_belatedPNG.fix('.png_bg, img, li');
 			</script>
 		<![endif]-->
-		
+<!-- Image Resizer -->
+
+		<script type="text/javascript" src="resources/scripts/jquery.imgareaselect-0.3.min.js"></script>		
 	</head>
