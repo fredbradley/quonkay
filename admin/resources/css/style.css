@@ -8,14 +8,14 @@ html {
                 }
 
 body {
+                color: black;
+                background-color: white;
                 font-family: Arial, Helvetica, sans-serif;
-                color: #555;
-                background: #f0f0f0 url('../images/bg-body.gif') top left repeat-y;
                 font-size: 12px;
                 }
 
 #body-wrapper {
-                background: url('../images/bg-radial-gradient.gif') fixed 230px top no-repeat;
+                background: fixed 230px top no-repeat;
                 }                
 
 /********************************      Elements styling      ********************************/
@@ -26,18 +26,18 @@ h1, h2, h3, h4, h5, h6 {
                 font-weight: bold;
                 }
 
-h1            { font-family: Calibri, Helvetica, Arial, sans-serif; font-size: 31px; font-weight: bold; color: #fff; 
+h1            { font-family: Calibri, Helvetica, Arial, sans-serif; font-size: 31px; font-weight: bold; color: white; 
 				  position: absolute; top: -1000px;  /* Remove this line and delete the logo (in the HTML) if you don't want an image as a logo */
 				}
 				
-h2            { font-size: 26px; padding: 0 0 10px 0; }
+h2            { color: red; font-size: 26px; padding: 0 0 10px 0; }
 h3            { font-size: 17px; padding: 0 0 10px 0; }
 h4            { font-size: 16px; padding: 0 0 5px 0; }
 h5            { font-size: 14px; padding: 0 0 5px 0; }
 h6            { font-size: 12px; padding: 0 0 5px 0; }
 
 
-a              { color: #57a000; text-decoration: none; }
+a              { color: #357ac3; text-decoration: none; }
 a:hover     { color: #000; }
 a:active     { color: #777; }
 a:focus     { outline: 1px; }
@@ -98,7 +98,7 @@ a.remove-link:hover {
 /********************************      Sidebar      ********************************/
 
 #sidebar {
-                background: url('../images/bg-sidebar.gif') top left no-repeat;
+                background:white;
                 width: 230px;
                 height: 100%;
                 position: absolute;
@@ -114,11 +114,11 @@ a.remove-link:hover {
 
 #sidebar a,
 #sidebar a:active {
-                color:#ccc;
+                color: black;
                 }
 
 #sidebar a:hover {
-                color:#fff;
+                color: red;
                 }
 
 #sidebar #sidebar-title {
@@ -151,18 +151,22 @@ a.remove-link:hover {
                 }
 
 #sidebar #main-nav li a.nav-top-item {
-                background: transparent url('../images/bg-menu-item-green.gif') right center no-repeat; /* Background image for default color scheme - green */
+                font-weight: bold;
+                border-color: black;
+                border-width: 2px;
+                border-style: solid;
+                background: transparent right center no-repeat; /* Background image for default color scheme - green */
                 padding: 10px 15px;
-                color: #fff;
+                color: black;
                 font-size: 14px;
                 cursor: pointer;
                 display: block;
                 text-decoration: none;
                 }
 
-#sidebar #main-nav li a.current {
-                background-image: url('../images/bg-menu-item-current.gif') !important;
-                color: #333;
+#sidebar #main-nav li a.current { !important;
+                font-size: 14px;            
+                color: black;
                 font-weight: bold;
                 }
                 
@@ -186,7 +190,7 @@ a.remove-link:hover {
 #sidebar #main-nav ul li a {
                 padding: 8px 15px;
                 display: block;
-                color: #aaa;
+                color: black;
                 font-size: 13px;
                 line-height: 1.2em;
                 }
@@ -194,7 +198,7 @@ a.remove-link:hover {
 #sidebar #main-nav ul li a:hover,
 #sidebar #main-nav ul li a.current,
 #sidebar #main-nav ul li a.current:hover {
-                color: #fff;
+                color: red;
                 }
 
 #sidebar #main-nav ul li a.current {
@@ -226,10 +230,21 @@ a.remove-link:hover {
 /************ Layout ************/
 
 #main-content {
-                margin: 0 30px 0 260px;
-                padding: 40px 0 0 0;
+                margin-left: 260px;
+                margin-bottom: 0;
+                margin-right: 30px;
+                margin-top: 0;
+                padding-left: 0;
+                padding-bottom: 0;
+                padding-right: 10px;
+                padding-top: 40px;
+                width: 700px;
                 }
 
+.column-full{ width: 100%;
+
+
+				}
 .column-left {
                 width: 48%;
                 float: left;
@@ -247,7 +262,7 @@ a.remove-link:hover {
 
 				
 #footer {
-				border-top: 1px solid #ccc;
+				border-top:;
 				margin: 40px 0 0 0;
 				padding: 20px 0;
 				font-size: 12px;
@@ -577,17 +592,20 @@ form input[type="radio"] {
 /********************************      Login Page      ********************************/
 
 body#login {
-                color: #fff;
-                background: #222 url('../images/bg-login.gif');
+                color: #000000;
+                background: #ffffff;
 				}
 				
 #login-wrapper {
-                background: url('../images/bg-login-top.png') top left repeat-x;
+                background:white;
 				}
 
 #login-wrapper #login-top {
+				padding-left: 0;
+				padding-bottom: 50px;
+				padding-right: 0;
+				padding-top: 50px;
 				width: 100%;
-				padding: 140px 0 50px 0;
 				text-align: center;
 				}
 				
@@ -598,9 +616,10 @@ body#login {
 				}
 				
 #login-wrapper #login-content label {
-				color: #fff;
-				font-weight: normal;
-				font-size: 14px;
+				line-height: 2em;
+				color: black;
+				font-weight: bold;
+				font-size: 15px;
 				font-family: Helvetica, Arial, sans-serif;
 				float: left;
 				width: 70px;
@@ -608,10 +627,12 @@ body#login {
 				}
 				
 #login-wrapper #login-content input {
+				border-color: black;
+				border-width: 1px;
+				border-style: solid;
 				width: 200px;
 				float: right;
 				margin: 0 0 20px 0;
-				border: 0;
 				background: #fff;
 				}
 				

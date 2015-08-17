@@ -1,7 +1,7 @@
                         <div id="footer">
-                                <small>
-                                                &#169; Copyright 2012 Template Design by Simpla Admin. Coded and developed by <a href="http://www.fredbradley.co.uk">Fred Bradley</a>
-                                </small>
+                                <!--<small>
+                                                &#169; Copyright 2012. Coded and developed by <a href="http://www.webvid.co.uk">webvid.co.uk</a>
+                                </small>-->
                         </div><!-- End #footer -->
                 </div> <!-- End #main-content -->
         </div></body>

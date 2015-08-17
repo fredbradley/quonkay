@@ -28,6 +28,10 @@
 		$smarty->assign('user', $user);
 		$smarty->assign('page', $page);
 		$smarty->assign('action', $_GET['action']);
+		$directory = getDirectory('../assets/uploadedpics');
+		$smarty->assign('directory', $directory);
+		$dirarray = getDirectoryArray('../assets/uploadedpics');
+		$smarty->assign('diroptions', $dirarray);
 	if ($_GET['message'])
 		$smarty->assign('message', $systemMsg);
 
@@ -43,6 +47,11 @@
 					include_once 'inc/sites.php';
 					$smarty->assign('sites', $sites);
 					$smarty->display('admin_sites.tpl');
+					break;
+				case "images":
+					include_once 'inc/images.php';
+					$smarty->assign('images', $images);
+					$smarty->display('admin_images.tpl');
 					break;
 				default:
 					$smarty->display('admin.tpl');

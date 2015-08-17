@@ -13,7 +13,7 @@
 			</noscript>
 {include file="admin_notification.tpl"}
 
-			<h2 id="page-intro">Sites Manager</h2>
+			<h3 id="page-intro">Website Manager</h3>
 			
 			<div class="content-box"><!-- Start Content Box -->
 				{if {$action}=="add"}

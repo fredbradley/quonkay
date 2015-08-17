@@ -2,24 +2,26 @@
 		<div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->			
 			<h1 id="sidebar-title"><a href="#">{$SITE.name}</a></h1>		  
 			<!-- Logo (221px wide) -->
-			<a href="#"><img id="logo" src="../assets/images/logo.png" style="width:221px;" alt="{$SITE.name} logo" /></a> 
+			<a href="http://{$SITE.server_name}/admin"><img id="logo" src="../assets/images/sofa_logo.png" style="width:221px;" alt="{$SITE.name} logo" /></a> 
 			<!-- Sidebar Profile links -->
 			<div id="profile-links">
-				Hello, <a href="user/profile" title="Edit your profile">{$user.first_name}</a>, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />
-				<br />
-				<a href="http://{$SITE.server_name}" target="_blank" title="View the Site">View the Site</a> | <a href="index.php?logout" title="Sign Out">Sign Out</a>
+				
+				<!--Hello, <a href="user/profile" title="Edit your profile">{$user.first_name}</a>, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />
+				<br />-->
+				
+				<a href="http://{$SITE.server_name}" target="_blank" title="View the Site">View your main website</a> | <a href="index.php?logout" title="Sign Out">Sign Out</a>
 			</div>        
 			
 			<ul id="main-nav">  <!-- Accordion Menu -->
 				
 				<li>
 					<a href="index.php" class="nav-top-item no-submenu {if {$page}} {else}current{/if}"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
-						Dashboard
+						Main Dashboard
 					</a>       
 				</li>				
 				<li>
 					<a href="#" class="nav-top-item {if {$page}=="sites"}current{/if}">
-						Sites Manager
+						Manage My Websites
 					</a>
 					<ul>
 				{if {$user.acl} gt 1}
@@ -28,10 +30,20 @@
 						<li><a href="index.php?page=sites&action=list">List Sites</a></li>
 					</ul>
 				</li>
+
+				<li>
+					<a href="#" class="nav-top-item {if {$page}=="images"}current{/if}">
+						Manage My Images
+					</a>
+					<ul>
+						<li><a href="index.php?page=images">Image Manager</a></li>
+					</ul>
+				</li>
+
 				{if {$user.acl} gt 2}
 				<li>
 					<a href="#" class="nav-top-item {if {$page}=="users"}current{/if}">
-						User Manager
+						Manage My Users
 					</a>
 					<ul>
 						<li><a href="index.php?page=users&action=add">Add User</a></li>
@@ -39,7 +51,12 @@
 					</ul>
 				</li>      
 				{/if}
+				
+                e: <a href="mailto:hello@webvid.co.uk?subject=Support">hello@webvid.co.uk</a> | t: 020 8133 1728
+                <br/>
+				<p>&copy; <a href="http://www.webvid.co.uk" target="_blank">webvid.co.uk</a> Copyright 2012.</p>
 			</ul> <!-- End #main-nav -->
+			
 			<div id="info" style="display:none">
 			<h3>Project Info</h3>
 			</div>
