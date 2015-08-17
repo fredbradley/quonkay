@@ -9,18 +9,18 @@
 ***************************************/
 
 	/* DEFINES PATHS */
-		$ROOT_PATH = "/Users/fredbradley/Sites/smarty_site/";
-		$SITE_PATH = $ROOT_PATH."simplysofas/";
+		$ROOT_PATH = "/kunden/homepages/3/d298570323/htdocs/_smarty_sites/";
+		$SITE_PATH = $ROOT_PATH."quonkay/";
 		
 
 	/* INCLUDE SMARTY THINGS */
 		require_once($ROOT_PATH.'libs/Smarty.class.php'); // THE SCRIPT THAT RUNS SMARTY
 		//ANY OTHER SMARTY PLUGINS THAT NEED INCLUDED SHOULD BE ADDED HERE
 		$smarty = new Smarty;
-define('TWO_SITES_SAME_NAME', 'Two of ya sites have the same host');
+		define('TWO_SITES_SAME_NAME', 'Two of ya sites have the same host');
 	/* INCLUDE DATABASE THINGS */
 		require_once($ROOT_PATH.'db.quonkay.php'); 		// Include DB SETTINGS
-		define('DB_PREFIX', 'ss_');				// PREFIX (IF USED) FOR THE DATABASE
+		define('DB_PREFIX', 'quonkay_');				// PREFIX (IF USED) FOR THE DATABASE
 		define('USERS_TABLE', DB_PREFIX.'users'); 		// (NAME OF USERS TABLE)
 		define('CONFIG_TABLE', DB_PREFIX.'config'); 		// (NAME OF CONFIG TABLE)
 		require_once($SITE_PATH.'inc/config/db.class.php');	// Include Database Class

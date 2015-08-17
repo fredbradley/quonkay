@@ -103,7 +103,8 @@ return $output;
 function deleteUser($id) {
 	$query = "DELETE FROM ".DB_PREFIX."users WHERE id=".$id;
 	$output = mysql_query($query);
-	$output .= header("Location: index.php?page=users&message=DeleteConfirmed");
+	$output = header("Location: index.php?page=users&message=DeleteConfirmed");
+	die();
 return $output;
 }
 /************************************************************************************

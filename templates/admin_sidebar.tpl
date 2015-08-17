@@ -2,7 +2,7 @@
 		<div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->			
 			<h1 id="sidebar-title"><a href="#">{$SITE.name}</a></h1>		  
 			<!-- Logo (221px wide) -->
-			<a href="#"><img id="logo" src="../assets/images/sofa_logo.png" style="width:221px;" alt="{$SITE.name} logo" /></a> 
+			<a href="#"><img id="logo" src="../assets/images/logo.png" style="width:221px;" alt="{$SITE.name} logo" /></a> 
 			<!-- Sidebar Profile links -->
 			<div id="profile-links">
 				Hello, <a href="user/profile" title="Edit your profile">{$user.first_name}</a>, you have <a href="#messages" rel="modal" title="3 Messages">3 Messages</a><br />
